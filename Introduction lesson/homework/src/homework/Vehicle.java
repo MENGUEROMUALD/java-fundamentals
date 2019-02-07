@@ -8,7 +8,7 @@ public class Vehicle {
 	public void run() {
 		
 	}
-	public Vehicle() {
+	public Vehicle() { //constructor.
 		//this.color=color;
 	}
 	public void getcolor() {

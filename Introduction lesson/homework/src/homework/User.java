@@ -14,7 +14,7 @@ public class User {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	}	
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -33,7 +33,7 @@ public class User {
 	public User() {
 		
 	}
-	public User(String name, int age, float height, String gender) {
+	public User(String name, int age, float height, String gender) {//constructor
 		this.name = name;
 		this.age = age;
 		this.height = height;
