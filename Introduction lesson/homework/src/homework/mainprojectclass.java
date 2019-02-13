@@ -23,7 +23,8 @@ public class mainprojectclass {
 		User boy = man;
 		
 		User girl = new User();
-		girl.setName("Andy");
+		girl.setName("fred");
+		System.out.println(girl.getName());
 		girl.setAge(26);
 		girl.setHeight(160);
 		girl.setGender("Male");
@@ -32,6 +33,13 @@ public class mainprojectclass {
 		System.out.println("Information : "+man.equals(girl));
 		System.out.println("Hashcode = "+man.hashCode());
 		System.out.println("Hashcode = "+girl.hashCode());
+		System.out.println("Equals : "+man.toString());
+		
+		   System.out.println("Before it is destroyed: "+man.toString()); 
+		   //Runtime.getRuntime.gc(); //explicitly invokes the garbage collector to destroy the objects
+		
+		Lesson7 square= new Lesson7();// creating object of lesson7
+		//square.square(64); // calling the method in lesson7
 		
 	}
 }

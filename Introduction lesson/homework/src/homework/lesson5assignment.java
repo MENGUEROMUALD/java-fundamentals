@@ -6,9 +6,10 @@ public class lesson5assignment {
 	public static void main(String[] args) {
 		Scanner s1 = new Scanner(System.in);
 		
+		//program should stop when -1 is entered.
 		System.out.println("Type in an alphabet : ");
 		char ch=s1.next().charAt(0);
-		int y = -1;
+		
 		switch (ch) {
 		case 'a':
 			System.out.println(ch+ " = Vowel");

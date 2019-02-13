@@ -9,13 +9,12 @@ public class lesson5assignmen2 {
 		int x;
 		System.out.println("Type in a number : ");
 		x = input.nextInt();
-		
-		for(int redo = 1; redo < x; redo++) 
-		{
+		int sum = 0;
+		for(int redo = 1; redo < x;redo++) {
 			System.out.print(redo+" + ");
-			if (redo == (x-1))System.out.print(x+" = ");
+			sum +=  (redo);
 		}
-	
+		System.out.println((x)+" = "+(sum + x));
+		
 	}
-	
 }

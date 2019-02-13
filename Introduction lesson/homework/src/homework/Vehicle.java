@@ -17,5 +17,7 @@ public class Vehicle {
 	public void changecolor(String colors) {
 		this.color=colors;
 	}
-	
+	public void run(float y) {
+		
+	}
 }
