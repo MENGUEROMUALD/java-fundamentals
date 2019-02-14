@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.romylove.javaIntermediaire;
+package com.devoirJava.sevenAcademy;
 
 /**
  *
@@ -14,6 +14,7 @@ public class User {
     public int age;
     public float height;
     public String gender;
+    
     public User(){
     }
 
@@ -55,10 +56,4 @@ public class User {
     public void setHeight(float height) {
         this.height = height;
     }
-    
-    
-
-    
-    
-    
 }

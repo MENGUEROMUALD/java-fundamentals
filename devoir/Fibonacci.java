@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.romylove.javaIntermediaire;
+package com.devoirJava.sevenAcademy;
 
 import java.util.Scanner;
 
 /**
  *
- * la fonction fib(n) calcul la suite fibonacci d'un nombre
- * @param n est le nombre à calculer
- * F(0) = 0 et F(1) = 1
+ * @author operator.cam
  */
-public class Fib {
-        public static long fib(int n){
+public class Fibonacci {
+    public static long fib(int n){
 
            if (n == 0) {
                 return 0;
@@ -36,4 +34,6 @@ public class Fib {
             } while (true);
 
         }
+    
+
 }
