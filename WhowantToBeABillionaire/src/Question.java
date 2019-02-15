@@ -56,7 +56,7 @@ public class Question {
 		player.setPriceMoney(-3000);
 		player.setTotal_score(0);
 		player.setCorrectQuestion(0);
-		System.out.println("argent "+player.getPriceMoney()+"score "+ player.getTotal_score()+"reponse correcte "+player.getPriceMoney());
+		System.out.println("argent "+ player.getPriceMoney()+"score "+ player.getTotal_score()+"reponse correcte "+player.getPriceMoney());
 		
 		break;
 		
