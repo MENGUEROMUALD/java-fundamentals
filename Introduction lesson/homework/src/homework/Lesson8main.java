@@ -1,13 +1,15 @@
 package homework;
+
 import java.util.Scanner;
 
 import java.io.UnsupportedEncodingException;
 
 public class Lesson8main {
-	
+
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		
+
 		Scanner input = new Scanner(System.in);
+
 		/*
 		 * // "String are sequence of characters enclosed in double quotes". String
 		 * myname = "Harvey Specter"; System.out.println(myname);
@@ -29,11 +31,15 @@ public class Lesson8main {
 		 * 
 		 * //String method compareTo(String str) String bname = new String("larry"); int
 		 * c = bname.compareTo("larry"); System.out.println(c);
-		 * 
-		 * //String method public int compareToIgnoreCase(String str) String cname = new
-		 * String("larry"); int t = cname.compareToIgnoreCase("LaRRy");
+		 */
+
+		/*
+		 * // String method public int compareToIgnoreCase(String str) String cname =
+		 * new String("larry"); int t = cname.compareToIgnoreCase("LaRRy");
 		 * System.out.println(t);
-		 * 
+		 */
+
+		/*
 		 * //String method public boolean contentEquals(StringBuffer sb) StringBuffer
 		 * buf = new StringBuffer("SevenAcademy"); String gname = "SevenAcademy";
 		 * boolean result = gname.contentEquals(buf); System.out.println(result);
@@ -59,8 +65,7 @@ public class Lesson8main {
 		 * System.out.println(rslt);
 		 * 
 		 * //String method public byte[] getBytes() String r = "seven"; byte[] rest =
-		 * r.getBytes(); System.out.println(rest); 
-		 * correct, they are byte codes
+		 * r.getBytes(); System.out.println(rest); correct, they are byte codes
 		 * 
 		 * //string method public byte[]getBytes(String chset) String h = "seven";
 		 * byte[]rst = h.getBytes("utf-8"); System.out.println(rst); // Faulty result
@@ -151,9 +156,9 @@ public class Lesson8main {
 		 * 
 		 * //String method public String toUpperCase() String re = "Learn SOlo";
 		 * System.out.println(re.toUpperCase());
-		 */
-		//String method public String trim()
-		/*
+		 * 
+		 * //String method public String trim()
+		 * 
 		 * String nh = " Learn SOlo "; System.out.println(nh);
 		 * System.out.println(nh.trim());
 		 * 
@@ -173,15 +178,13 @@ public class Lesson8main {
 		System.out.println("Enter Email : ");
 		String asa = input.nextLine();
 		user.setEmail(asa);
-		
+
 		System.out.println("Enter Password : ");
 		String ase = input.nextLine();
-		user.setPassword(ase);
-		System.out.println("Your Email is : "+user.getEmail());
-		System.out.println(" Your Password is : "+user.getPassword());
-		
-		
-		
+		 user.setPassword(ase);
+		System.out.println("Your Email is : " + user.getEmail());
+		System.out.println(" Your Password is : " + user.getPassword());
+
 	}
 
 }
