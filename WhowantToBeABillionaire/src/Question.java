@@ -7,7 +7,7 @@ public class Question {
 		Scanner input=new Scanner(System.in);
 		System.out.println("quel est votre nom ?");
 		String name =input.nextLine();
-		System.out.println("bien Mr "+name+"jouons, mais sachez qu'une seule mauvaise reponse entraine l'arret du jeux :)");
+		System.out.println("bien Mr "+name+"jouons, mais sachez qu'une seule mauvaise reponse entraine l'arret du jeux :) , pret allons s'y");
 		Player player = new Player(name, 0,0, 0);
 		boolean answer =true;
 		while(answer == true) {

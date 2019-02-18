@@ -4,6 +4,7 @@ public class Fibonnacci {
 
 	public static void main(String args[])  { 
 	Scanner input=new Scanner(System.in);
+	System.out.println("bienvenue sur fibonacci");
 	System.out.println("veiller entrer un nombre");
 	int nombre=input.nextInt();
 		
