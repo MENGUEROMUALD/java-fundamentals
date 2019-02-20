@@ -41,17 +41,9 @@ public class WhoWinsAMillion {
 		this.correctQuestions = correctQuestions;
 	}
    
-	
-	public static void main(String[] args) {
-		String[] questions = {"What is your nation?","Who was the star of the movie titled White Christmas?","Stollen is the traditional fruit cake of which country?"};
-        String[] answers ={"Cameroon","Crosby","Germany"};
-        int nbreQestions=0;
-        @SuppressWarnings("resource")
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter your name:");
-		String x = input.next();
-		System.out.println(x +" is about to start the game");
-        for (int i=0;i<questions.length;i++) {
+	public static void play(String[] questions,String[] answers) {
+		int nbreQestions=0;
+		for (int i=0;i<questions.length;i++) {
         	Scanner input1 = new Scanner(System.in);
         	System.out.println("question:\n" +questions[i]);
         	System.out.println("answer: ");
@@ -77,7 +69,5 @@ public class WhoWinsAMillion {
         System.out.println("Total prize money obtained: "+prizeMoney);
         System.out.println("Total correct answers: " +correctQuestions);
         
-        
-		
-}
+	}
 }
