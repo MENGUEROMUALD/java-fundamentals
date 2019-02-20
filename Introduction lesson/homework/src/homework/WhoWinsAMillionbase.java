@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class WhoWinsAMillionbase {
 	
 	String Username;
-	int totalScore;
-	float prizeMoney;
-	short correctQuestions;
+	int totalScore = 0;
+	float prizeMoney = 0;
+	short correctQuestions = 0;
 	
 	public void setUsername(String username) {
 		Username = username;
@@ -36,6 +36,9 @@ public class WhoWinsAMillionbase {
 	}
 	public WhoWinsAMillionbase() {
 		
+	}
+	public WhoWinsAMillionbase(String username) {
+		Username = username;
 	}
 
 }

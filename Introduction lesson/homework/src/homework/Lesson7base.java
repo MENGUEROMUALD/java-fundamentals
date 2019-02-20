@@ -17,7 +17,7 @@ public class Lesson7base {
 			System.out.print(f+" x ");
 			n*=f;	
 		}
-		System.out.print(1+" = ");
+		System.out.print(1+" = "+n);
 		return n;
 	}
 	

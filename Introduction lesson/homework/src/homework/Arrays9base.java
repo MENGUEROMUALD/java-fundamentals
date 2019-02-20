@@ -8,7 +8,11 @@ public class Arrays9base {
 			numbers[a]=numbers[a]*2;
 		return numbers;
 	}
-	int[] values = increaseValue();
+	
+	public int[] getNumber() {
+		int[] values = increaseValue();
+		return values;
+	}
 	
 	public int getLength(int[]arr) {
 		System.out.println(arr.length);
@@ -17,7 +21,11 @@ public class Arrays9base {
 	//getLength(numbers);
 	
 	public Arrays9base() {
-		
 	}
+	/*int[] user={a,b,c,d};
+	public int[] getSquare(int a, int b,int c, int d) {
+		int[] e = ({{{a}},{{b}},{{c}},{{d}}}*{2})
+			return e;*/ //}
+	
 
 }
