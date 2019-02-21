@@ -1,87 +1,76 @@
 package homework;
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class WhoWinsAMillion {
 	
 	public static void main(String[] args) {
 		
+		Calendar calendar = Calendar.getInstance();
+		
 		Scanner input = new Scanner(System.in);
 		
-		/*String a = "Who is the President of Cameroon? ";
-		String a1= "Paul Biya";
-		String b = "How many colors on the Cameroon flag? ";
-		int  b1 = 3;
-		String c = "In which town is Mount Cameroon? ";
-		String c1= "Buea";
-		String d = "How many regions in Cameroon? ";
-		int d1 = 10;
-		*/
-		
-		/*
-		 * WhoWinsAMillionbase game = new WhoWinsAMillionbase();
-		 * System.out.println("Please enter a Username : "); String un =
-		 * input.nextLine(); game.setUsername(un);
-		 * System.out.println("Welcome to WinAMillion game "+game.getUsername());
-		 * System.out.println(" Please answer the following questions ");
-		 * System.out.println(" ");
-		 */
-		
-		WWAMGame Play = new WWAMGame();
 		System.out.println("PLEASE ENTER PLAYER1 NAME : ");
-		String player1 = input.nextLine();
+		String player = input.nextLine();
+		WhoWinsAMillionbase player1 = new WhoWinsAMillionbase(player);
 		System.out.println("PLEASE ENTER PLAYER2 NAME : ");
-		String player2 = input.nextLine();
-		System.out.println("WELCOME "+player1+" AND "+player2+" TO WHO WINS A MILLION GAME");
+		player = input.nextLine();		
+		WhoWinsAMillionbase player2 = new WhoWinsAMillionbase(player);
 		
-		Play.getQuestion(); 
+        System.out.println("WELCOME "+player1.getUsername()+" AND "+player2.getUsername()+" TO WHO WINS A MILLION GAME");
+        WhoWinsAMillionbase[] players = new WhoWinsAMillionbase[2];
+        players[0] = player1;
+        players[1] = player2;
+        
 		
+		WWAMGame[] questions = new WWAMGame[5];
 		
-	/*	int sum= 0;
-		System.out.println(a);
-		String A = input.nextLine();
-		if(A.equalsIgnoreCase(a1)){ ++sum;
-			System.out.println("Correct");
-			sum++; 
-		}else System.out.println("Wrong Answer");
-			sum--; 
+			questions[0]= new WWAMGame("Who is the president of cameroon?", "Paul Biya", 1);
+			questions[1]= new WWAMGame("How many colors on the cameroon flag?", "3", 1);
+			questions[2]= new WWAMGame("In which town is mount cameroon?", "Buea", 1);
+			questions[3]= new WWAMGame("How many regions are there in cameroon?", "10", 1);
+			questions[4]= new WWAMGame("What is the capital of cameroon?", "Yaounde", 1);
 			
-		System.out.println(" ");
-		
-		System.out.println(c);
-		String C = input.nextLine();
-		if(C.equalsIgnoreCase(c1)) {++sum;
-			System.out.println("Correct");
-			sum++;
-		}else System.out.println("Wrong Answer");
-		sum--; 
-		System.out.println(" ");
-		
-		System.out.println(b);
-		int B = input.nextInt();
-		if(B == b1) {++sum;
-			System.out.println("Correct");
-			sum++;
-		}else  System.out.println("Wrong Answer");
-				sum--; 
+			for(int j =0; j<players.length;j++) {
+				System.out.println(players[j].getUsername() + " is your turn.");
 				
-		System.out.println(" ");
-		
-		System.out.println(d);
-		int D = input.nextInt();
-		if(D == d1) {++sum;
-			System.out.println("Correct");
-			sum++;
-		}else System.out.println("Wrong Answer");
-			sum--;*/
+				players[j].setStarttime();
 				
-		
-		/*
-		 * System.out.println(" ");
-		 * System.out.println(game.getUsername()+" Your total Score = "+sum);
-		 */
-	
-		
-	
-
+				
+			for(int i=0; i<questions.length; i++) {
+				
+				 WWAMGame ques = questions[i];
+				System.out.println(ques.getQuestion());
+				String ans = input.nextLine();
+				players[j].setNumberOfQUestions(i+1);
+				
+				if(ques.validateAnswer(ans)) {
+					System.out.println("Correct");
+					players[j].setTotalScore(players[j].getTotalScore() + ques.getScore());
+					players[j].setCorrectQuestions(players[j].getCorrectQuestions() + 1 );
+					players[j].setPrizeMoney(players[j].getPrizeMoney() + 2);
+				}
+				else {
+					System.out.println("Wrong Answer");
+					players[j].setTotalScore(players[j].getTotalScore() - ques.getScore());
+					if(players[j].getTotalScore() < 0) break;
+				}
+				
+			 }
+			
+			
+			}
+			
+			
+			 System.out.println(players[0].getUsername() + ", Your total Score = " + players[0].getTotalScore()
+			 + "\nNumber of question attempted: " + players[0].getNumberOfQUestions()
+			 + "\nNumber of correct question: " + players[0].getCorrectQuestions()
+			 + "\nYour Prize is: " + players[0].getPrizeMoney());
+			 
+			 System.out.println(players[1].getUsername() + ", Your total Score = " + players[1].getTotalScore()
+					 + "\nNumber of question attempted: " + players[1].getNumberOfQUestions()
+					 + "\nNumber of correct question: " + players[1].getCorrectQuestions()
+					 + "\nYour Prize is: " + players[1].getPrizeMoney());
+			 
 	}
 }

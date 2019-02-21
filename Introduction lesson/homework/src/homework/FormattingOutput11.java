@@ -15,6 +15,10 @@ public class FormattingOutput11 {
 		System.out.printf("%dX\n",20);
 		System.out.println(" ");
 		
+		System.out.printf("%e\n",314.156);
+		System.out.println("");
+		
+		
 		System.out.printf("%e\n",0.314159265358);
 		System.out.printf("%e\n",123456789.25);
 		System.out.println(" ");
@@ -56,7 +60,14 @@ public class FormattingOutput11 {
 		System.out.printf("%tT\n",calendar);
 		System.out.println("");
 		
+		int y = 2; int x = 5;
+		System.out.printf("y = %2$d, x = %2$d", y, x); // 2$ assigns the second value to all
+		System.out.println(" ");
+		
 		System.out.printf("%1$tA,%1$tB %1$tY\n",calendar);
+		System.out.printf("%tA,%tB %tY\n",calendar,calendar,calendar);
+		System.out.println(" ");
+		
 		System.out.printf("%1$TA,%1$TB %1$TY\n",calendar);
 		System.out.printf("%1$ta,%1$tb %1$ty\n",calendar);
 		System.out.println("");

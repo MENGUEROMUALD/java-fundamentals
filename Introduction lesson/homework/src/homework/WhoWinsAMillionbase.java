@@ -1,25 +1,50 @@
 package homework;
 
-
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class WhoWinsAMillionbase {
 	
-	String Username;
-	int totalScore = 0;
-	float prizeMoney = 0;
-	short correctQuestions = 0;
 	
+	
+	String username;
+	float totalScore = 0;
+	float prizeMoney = 0;
+	int correctQuestions = 0;
+	int numberOfQUestions;
+	String starttime;
+	int howlong;
+	
+	
+	
+	
+	public void setStarttime() {
+		Calendar cal = Calendar.getInstance();
+		System.out.println(
+				String.format("current time %02d:%02d:%02d", cal.get(Calendar.HOUR_OF_DAY) ,
+						cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND)));
+		
+		this.starttime = starttime;
+	}
+	public String getStarttime() {
+		return starttime;
+	}
+	public void setHowlong(int howlong) {
+		this.howlong = howlong;
+	}
+	public int getHowlong() {
+		return howlong;
+	}
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 	public String getUsername() {
-		return Username;
+		return username;
 	}
-	public void setTotalScore(int totalScore) {
+	public void setTotalScore(float totalScore) {
 		this.totalScore = totalScore;
 	}
-	public int getTotalScore() {
+	public float getTotalScore() {
 		return totalScore;
 	}
 	public void setPrizeMoney(float prizeMoney) {
@@ -28,17 +53,31 @@ public class WhoWinsAMillionbase {
 	public float getPrizeMoney() {
 		return prizeMoney;
 	}
-	public void setCorrectQuestions(short correctQuestions) {
-		this.correctQuestions = correctQuestions;
+	public void setCorrectQuestions(int correctQuestions) {
+		
+		if(correctQuestions<0) {
+			this.correctQuestions = 0;
+		}
+		else {
+			this.correctQuestions = correctQuestions;
+		}
+		
 	}
-	public short getCorrectQuestions() {
+	public int getCorrectQuestions() {
 		return correctQuestions;
+	}
+	public void setNumberOfQUestions(int num) {
+		numberOfQUestions = num;;
+	}
+	public int getNumberOfQUestions() {
+		return numberOfQUestions;
 	}
 	public WhoWinsAMillionbase() {
 		
 	}
 	public WhoWinsAMillionbase(String username) {
-		Username = username;
+		this.username = username;
 	}
+	
 
 }
