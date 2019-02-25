@@ -46,7 +46,7 @@ public class QuestionTableau {
 				System.out.println("argent "+player.getPriceMoney()+" score "+ player.getTotal_score()+" reponse correcte "+player.getCorrectQuestion());
 			}else {
 				System.out.println("votre reponse en incorrect");
-				player.setPriceMoney(-20000);
+				player.setPriceMoney(-10000);
 				player.setTotal_score(0);
 				player.setCorrectQuestion(0);
 				System.out.println("argent "+player.getPriceMoney()+" score "+ player.getTotal_score()+"reponse correcte "+player.getPriceMoney());
