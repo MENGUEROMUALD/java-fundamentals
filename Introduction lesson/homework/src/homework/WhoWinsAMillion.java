@@ -30,11 +30,13 @@ public class WhoWinsAMillion {
 			questions[2]= new WWAMGame("In which town is mount cameroon?", "Buea", 1);
 			questions[3]= new WWAMGame("How many regions are there in cameroon?", "10", 1);
 			questions[4]= new WWAMGame("What is the capital of cameroon?", "Yaounde", 1);
+			System.out.println("");
 			
 			for(int j =0; j<players.length;j++) {
 				System.out.println(players[j].getUsername() + " is your turn.");
 				
 				players[j].setStarttime();
+				System.out.println("");
 				
 				
 			for(int i=0; i<questions.length; i++) {
@@ -57,17 +59,19 @@ public class WhoWinsAMillion {
 				}
 				
 			 }
+			System.out.println("");
 			
 			
 			}
 			
 			
-			 System.out.println(players[0].getUsername() + ", Your total Score = " + players[0].getTotalScore()
+			 System.out.println(players[0].getUsername() + ",\nYour total Score = " + players[0].getTotalScore()
 			 + "\nNumber of question attempted: " + players[0].getNumberOfQUestions()
 			 + "\nNumber of correct question: " + players[0].getCorrectQuestions()
 			 + "\nYour Prize is: " + players[0].getPrizeMoney());
+			 System.out.println("");
 			 
-			 System.out.println(players[1].getUsername() + ", Your total Score = " + players[1].getTotalScore()
+			 System.out.println(players[1].getUsername() + ",\nYour total Score = " + players[1].getTotalScore()
 					 + "\nNumber of question attempted: " + players[1].getNumberOfQUestions()
 					 + "\nNumber of correct question: " + players[1].getCorrectQuestions()
 					 + "\nYour Prize is: " + players[1].getPrizeMoney());

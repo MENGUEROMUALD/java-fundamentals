@@ -30,7 +30,7 @@ public class WhoWinsAMillionbase {
 		return starttime;
 	}
 	public void setHowlong(int howlong) {
-		this.howlong = howlong;
+			
 	}
 	public int getHowlong() {
 		return howlong;
