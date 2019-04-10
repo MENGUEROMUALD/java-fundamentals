@@ -1,4 +1,7 @@
 import java.io.File;
+/**
+ * tha class help us to serialise the data of the user
+ */
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;

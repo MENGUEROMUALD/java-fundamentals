@@ -41,6 +41,9 @@ public class Question {
 		player.setTotal_score(0);
 		player.setCorrectQuestion(0);
 		System.out.println("argent "+player.getPriceMoney()+"score "+ player.getTotal_score()+"reponse correcte "+player.getPriceMoney());
+		/**
+		 * the break help to stop the program if the player have a wrong aswer
+		 */
 		break;
 	}
 	System.out.println(name +"Question trois , quel est le meilleur prof du monde ?");
@@ -57,7 +60,9 @@ public class Question {
 		player.setTotal_score(0);
 		player.setCorrectQuestion(0);
 		System.out.println("argent "+ player.getPriceMoney()+"score "+ player.getTotal_score()+"reponse correcte "+player.getPriceMoney());
-		
+		/**
+		 * the break help to stop the program if the player have a wrong aswer
+		 */
 		break;
 		
 		}

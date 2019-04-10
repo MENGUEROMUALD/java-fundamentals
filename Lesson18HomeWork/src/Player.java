@@ -1,3 +1,16 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+/**
+ * 
+ * @author ndeme yvan Rodrigue
+ *
+ */
 public class Player {
 	public String user_name;
 	int total_score;
@@ -10,9 +23,14 @@ public class Player {
 		this.priceMoney = priceMoney;
 		CorrectQuestion = correctQuestion;
 	}
+	/**
+	 * 
+	 * @return the user name of the player
+	 */
 	public String getUser_name() {
 		return user_name;
 	}
+	
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
@@ -22,19 +40,26 @@ public class Player {
 	public void setTotal_score(int total_score) {
 		this.total_score = total_score;
 	}
+	/**
+	 * 
+	 * @return the price of the player
+	 */
 	public int getPriceMoney() {
 		return priceMoney;
 	}
 	public void setPriceMoney(int priceMoney) {
 		this.priceMoney = priceMoney;
 	}
+	/**
+	 * 
+	 * @return the number of correct question the player
+	 */
 	public int getCorrectQuestion() {
 		return CorrectQuestion;
 	}
 	public void setCorrectQuestion(int correctQuestion) {
 		CorrectQuestion = correctQuestion;
 	}
-	
 	
 	
 

@@ -1,8 +1,15 @@
 import java.io.IOException;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author ndeme Yvan
+ * 
+ *
+ */
 public class Question {
-	
+	/**
+	 * we will use that method to ask somme question to the player if the user have one wrong answer the game is finish.
+	 */
 	public void question() {
 		MillionSerialization data = new MillionSerialization();
 		System.out.println("************bienvenue sur qui veux gagner des million*************");
@@ -33,6 +40,9 @@ public class Question {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			/**
+			 * the break help to stop the program if the player have a wrong aswer
+			 */
 			break;
 		}
 		System.out.println(name +" Question deux , qui a gagner les election au cameroun en 2018 ?");
@@ -65,12 +75,18 @@ public class Question {
 		player.setPriceMoney(30000);
 		player.setTotal_score(30);
 		player.setCorrectQuestion(3);
+		/**
+		 * here save the datawith serialization
+		 */
 		try {
 			data.serialize( player.getTotal_score(), player.getUser_name());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		/**
+		 * the break help to stop the program if the player have a wrong aswer
+		 */
 		break;
 	}else {
 		System.out.println("votre reponse en incorrect");
