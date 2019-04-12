@@ -5,8 +5,7 @@ public class Increasing {
 		int[] array= {1,7,4};
 		System.out.println(array(array));
 	}
-	
-	
+
 	public static boolean array(int[] array) {
 		if(array.length<=1) {
 			return false;

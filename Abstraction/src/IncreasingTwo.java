@@ -1,11 +1,15 @@
+import java.util.Arrays;
 
 public class IncreasingTwo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array= {1,2,5};
+		int[] array= {1,6,5};
+		Arrays.sort(array);
+		System.out.println(array[1]);
 		System.out.println(array(array));
 	}
+	
 	public static boolean array(int[] array) {
 		if(array.length<=1){
 			return false;
