@@ -2,6 +2,15 @@ package homework;
 
 //HourlyEmployee, SalariedEmployee, comissionEmployee, BasePlusComissionEmployee, mainprojectClass
 
+/** This class is extended by the hourlyEmployee , ComissionEmployee, BasePlusComissionEmployee and SalariedEmployee.
+ * It basically connects all the workers and computes their earnings each pay period.
+ * @author Uduma Andreas Mokonchu
+ * @since March 27 2019
+ * {@link homework.SalariedEmployee}
+ * {@link homework.HourlyEmployee}
+ * {@link homework.ComissionEmployee}
+ * {@link homework.BasePlusComissionEmployee}
+*/
 public abstract class Employee {
 	public String firstName;
 	public String lastName;
@@ -19,6 +28,9 @@ public abstract class Employee {
 	age = empage;
 	hourlyPay = hrPay;
 	
+	/**
+	 * Employee: the above is a constructor with 7 parameters.
+	 */
 	
 	}
 

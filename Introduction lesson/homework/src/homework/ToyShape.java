@@ -8,7 +8,7 @@ public class ToyShape {
 	
 	public static void main(String[] args) {
 		
-		ToyShape.getShape();
+		//ToyShape.getShape();
 		ToyShape.getSize();
 	}
 	public static void getShape() {
@@ -36,22 +36,23 @@ public class ToyShape {
 	}
 	public static void getSize() {
 		System.out.println("Type in a shape and get the metric value : ");
+		int x = 4;
+		do {
 		String Shape = input.nextLine();
-		switch (Shape.compareToIgnoreCase(null)) {
 		
-		int Triangle;
-		case Triangle:
-			System.out.println("Metric Value = Area ");
-		case Square:
+		String b = "Square";
+		String c = "Cube";
+		String d = "Cylinder";
+		if(Shape.equalsIgnoreCase("Triangle"))
 			System.out.println("Metric value = Area ");
-		case Cube:
-			System.out.println("Metric Value = Volume ");
-		case Cylinder:
-			System.out.println("Metric Value = Volume ");
-			default:
-				System.out.println("Out of range");	
-		}
-		
+		if(Shape.equalsIgnoreCase(b))
+			System.out.println("Metric value = Area ");
+		if(Shape.equalsIgnoreCase(c))
+			System.out.println("Metric value = Volume ");
+		if(Shape.equalsIgnoreCase(d))
+			System.out.println("Metric value = Volume ");
+		int f = (x--);
+	}while (x != 0);
+	
 	}
-
 }

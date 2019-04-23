@@ -1,40 +1,33 @@
 package homework;
 
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Formatter;
 import java.util.Scanner;
 
 public class WhoWinsAMillionbase {
 	
 	
 	
+	public static long elapsedTime;
 	String username;
 	float totalScore = 0;
 	float prizeMoney = 0;
 	int correctQuestions = 0;
 	int numberOfQUestions;
-	String starttime;
-	int howlong;
+	Formatter starttime;
 	
-	
-	
+	Formatter time = new Formatter();
 	
 	public void setStarttime() {
-		Calendar cal = Calendar.getInstance();
-		System.out.println(
-				String.format("current time %02d:%02d:%02d", cal.get(Calendar.HOUR_OF_DAY) ,
-						cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND)));
-		
-		this.starttime = starttime;
+		time.format("%tr", Calendar.getInstance());
+		 System.out.println("The time now is "+time.toString());
+		 this.starttime = starttime;
 	}
-	public String getStarttime() {
+	public Formatter getStarttime() {
 		return starttime;
 	}
-	public void setHowlong(int howlong) {
-			
-	}
-	public int getHowlong() {
-		return howlong;
-	}
+	
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -77,6 +70,7 @@ public class WhoWinsAMillionbase {
 	}
 	public WhoWinsAMillionbase(String username) {
 		this.username = username;
+		
 	}
 	
 

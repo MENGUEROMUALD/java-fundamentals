@@ -30,7 +30,6 @@ public class lesson5assignment {
 			System.out.println(ch+ " = Consonant");
 			break;
 		}
-		
 	}
 
 }

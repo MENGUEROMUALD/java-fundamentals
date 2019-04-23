@@ -1,4 +1,5 @@
 package homework;
+//run at lesson8main
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,8 +16,6 @@ public class Userlesson8 {
 		if ( len >= 6 && len <=10) {
 			this.password = password;
 		}
-		
-
 	}
 	
 	public String getPassword() {

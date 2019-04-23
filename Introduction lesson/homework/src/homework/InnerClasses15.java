@@ -42,17 +42,23 @@ public class InnerClasses15 {
 	
 	public static void main(String[] args){
 		
-		InnerClasses15 obj = new InnerClasses15();
+/*		InnerClasses15 obj = new InnerClasses15();
 		obj.start( new Anonymous15(){
 			
-		@Override
 		public void method(String _ args){
 		System.out.println("Hello! Welcome inside!");
 		}
-});
+		
+
+		@Override
+		public void method() {
+			// TODO Auto-generated method stub
+			
+		}});
 	}
 		public void start(Anonymous15 a){
 		a.method();
-		}
+		}*/
+	}
 }
 	

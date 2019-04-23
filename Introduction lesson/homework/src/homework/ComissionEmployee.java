@@ -1,4 +1,9 @@
 package homework;
+/**
+ * Comission employees extends employees
+ * @author Uduma Andreas Mokonchu
+ *@since March 27 2019
+ */
 
 public class ComissionEmployee extends Employee {
 	
@@ -20,6 +25,9 @@ public class ComissionEmployee extends Employee {
 		super(fname, lname, id, age, active, sales);
 		SALES_LIMIT = 10000;
 	}
+	/**
+	 * having 3 different constructors comission employees can be manipulated in different forms.
+	 */
 	
 	//default constructor
 	public ComissionEmployee(){
@@ -59,11 +67,12 @@ public class ComissionEmployee extends Employee {
 				+ "Employee ID: %d\n"
 				+ "Employee Age: %d\n"
 				+ "Employed: %b\n"
-				+ "Commission: %,.2f"
-				+ "Sales: %d"
-				+ "Earnings: %,.2f"
+				+ "Commission: %,.2f\n"
+				+ "Sales: %d\n"
+				+ "Hours Worked: %d\n"
+				+ "Earnings: %,.2f\n"
 				+ "", getFirstName(), getLastName(), getEmployeeId(),
-				getAge(), getCommission(), getSales(), getHoursWorked(), computeEarnings()
+				getAge(),getEmployed(), getCommission(), getSales(), getHoursWorked(), computeEarnings()
 				);
 				}
 			

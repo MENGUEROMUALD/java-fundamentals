@@ -1,20 +1,29 @@
 package homework;
 
+/**
+ * Salaried employees extends employees
+ * @author Uduma Andreas Mokonchu
+ *@since March 27 20019
+ */
+
 public class SalariedEmployee extends Employee {
 
 	private double weeklySalary;
-	public SalariedEmployee(String fname, String lname, int id,
-	boolean active, int age, double weeklySalary ){
-	super(fname, lname, id, age, active, weeklySalary);
-	setWeeklySalary(weeklySalary);
+	
+	public SalariedEmployee(String fname, String lname, int id,boolean active, int age, double weeklySalary ){
+		super(fname, lname, id, age, active, weeklySalary);
+		setWeeklySalary(weeklySalary);
 	}
 	public void setWeeklySalary(double salary){
-	if(salary >= 0.0d)
-	weeklySalary = salary;
+		if(salary >= 0.0d)
+			weeklySalary = salary;
 	}
+	/**
+	 * This class extends the employee class and but its just for salaried employees.
+	 */
 	@Override
 	public double computeSalary(){
-	return getWeeklySalary();
+		return getWeeklySalary();
 	}
 	private double getWeeklySalary() {
 		return weeklySalary >= 0.0d ? weeklySalary : 0.0d;

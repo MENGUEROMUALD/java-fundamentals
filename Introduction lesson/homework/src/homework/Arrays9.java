@@ -7,42 +7,35 @@ public class Arrays9 {
 	public static void main(String[] args) {
 
 		
-		  int [] numbers = {1,2,7,4,5,6};
-		  System.out.println(numbers[0]);//prints the number at index 0
-		  
-		  for (int i = 0; i < 6; i++)
-			  System.out.println(numbers[i]);//prints out the numbers in array using for loop
-		  
-		  for (int i: numbers) 
-			  System.out.println(i);//prints out the number in array using foreach loop
-		  
-		  int sum = 0;
-		  for (int i: numbers) 
-			  sum+=i; 
-		  System.out.print(sum);//prints the sum of all the numbers in the array 
-		  System.out.println(" ");
-		  
-		  
-		  int max = 0; 
-		  for (int i:numbers)
-			  if(max < i)
-				  max = i;
-		  System.out.println("Maximum is : "+max);//finds the maximum number in the array
-		  
-		  // get the maximum number with the regular for loop..... Assignment
-		  
-		  
-		  
-		  
-		  int maxi = numbers[0];
-		  for (int u = 0; u<numbers.length; u++) {
-			  if(numbers[u]> maxi) {
-				  maxi = numbers[u];
-			  }
-		  }
-		  System.out.println(" Max is : "+maxi);
-		  
-		  
+		/*
+		 * int [] numbers = {1,2,7,4,5,6}; System.out.println(numbers[0]);//prints the
+		 * number at index 0
+		 */
+		/*
+		 * for (int i = 0; i < 6; i++) System.out.println(numbers[i]);//prints out the
+		 * numbers in array using for loop
+		 * 
+		 * for (int i: numbers) System.out.println(i);//prints out the number in array
+		 * using foreach loop
+		 * 
+		 * int sum = 0; for (int i: numbers) sum+=i; System.out.print(sum);//prints the
+		 * sum of all the numbers in the array System.out.println(" ");
+		 * 
+		 * 
+		 * int max = 0; for (int i:numbers) if(max < i) max = i;
+		 * System.out.println("Maximum is : "+max);//finds the maximum number in the
+		 * array
+		 * 
+		 * // get the maximum number with the regular for loop..... Assignment
+		 * 
+		 * 
+		 * 
+		 * 
+		 * int maxi = numbers[0]; for (int u = 0; u<numbers.length; u++) {
+		 * if(numbers[u]> maxi) { maxi = numbers[u]; } }
+		 * System.out.println(" Max is : "+maxi);
+		 * 
+		 */
 		 
 
 		/*
@@ -102,25 +95,29 @@ public class Arrays9 {
 				}
 			}
 		}
+		int sum=0;
 		int[][] p = {{1,3,7},{3,0,-1}};
 		int[][][] o = {{{1}},{{2}},{{3}}};
-		int result[][][] = new int [3][3][3];
+		int[][][] result = new int [3][3][3];
 		int add = 0;
 		for (int i=0; i < 3; i++) {
-			for (int j =0; j<3; j++) {
-				for (int k=0; k<3; k++) {
-					for (int l =0;l<4; l++) {
-						sum=sum+p[i][l]*o[l][j][k];{
+			for (int j =0; j<p[i].length; j++) {
+				
+				for (int k=0; k<o.length; k++) {
+					for (int l =0;l<o[k].length; l++) {
+						
+						sum+= (p[i][j])*(o[i][k][l]);
+						result[i][j][k] = sum;
+						System.out.println(result);
+						
+						 /*sum=sum+p[i][l]*o[l][j][k];{
 							result[i][j][k]=sum;
-							sum=0;
-							System.out.println(result);
+							System.out.println(result);*/
 						}
 						
 					}
 				}
 			}
 		}
-
-	}
 
 }

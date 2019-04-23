@@ -7,13 +7,18 @@ public class StringBuilder16 {
 	public static void main(String[] args) {
 		
 		StringBuilder sb = new StringBuilder("Hello, welcome to seven");
-		System.out.printf("Characters: %s\n", sb.toString());
+		
+		StringBuilder st = new StringBuilder(20);
+		System.out.printf(" Capacity1 : %d ",st.capacity());
+		
+		
+		System.out.printf("\nCharacters: %s\n", sb.toString());
 		System.out.printf("Capacity: %d\n", sb.capacity());
 		System.out.printf("Length: %d\n", sb.length());
 		System.out.println("");
 		
 		int old = sb.length();
-		sb.setLength(5); // MODIFY LENGTH TO BE MORE THAN old(old+5)
+		sb.setLength(5); // MODIFY LENGTH TO BE 5
 		System.out.printf("Old length: %d, New length: %d\n", old,sb.length());
 		System.out.printf(" %s\n", sb.toString());
 		System.out.println("");
@@ -26,7 +31,7 @@ public class StringBuilder16 {
 		
 		System.out.printf("Character %c",sb.charAt(3));
 		sb.setLength(10);
-		//System.out.printf("Character %c", sb.charAt(10) ); returns an error if index is invalid
+		//System.out.printf("Character %c", sb.charAt(10) ); returns an error if index is invalid after setting the length.
 		System.out.println("");
 		
 		System.out.println("");
@@ -55,7 +60,7 @@ public class StringBuilder16 {
 		sb.append('F');
 		System.out.println(sb.toString());
 		System.out.println("");
-		
+		                                                            //using methods here will be method overloading.
 		String s1 = "Hello";
 		String s2 = "Hi";
 		StringBuilder sb1 = new StringBuilder(s1);
@@ -73,7 +78,15 @@ public class StringBuilder16 {
 		sb1.insert(1, 19);
 		sb1.insert(2, new char[]{'w','e'});
 		sb1.insert(3, 3.1415);
-		System.out.println(sb1.toString());
+		System.out.println(sb1.toString());      //copy characters from a string without using getchars.
+		
+		StringBuilder cc = new StringBuilder("Hello Welcome to 7Academy");
+		char[] newcc = new char[5];
+		for(int i = 0; i < 5; i++)
+			newcc[i] = cc.charAt(i);
+		for(int i = 0; i < 5; i++)
+			System.out.println(newcc[i]);
+		
 		
 		sb1.delete(1, 11);
 		System.out.println(sb1.toString());
@@ -88,6 +101,9 @@ public class StringBuilder16 {
 		System.out.println("");
 		
 		Character c = new Character('A');
+		System.out.printf("%c", c);
+		System.out.printf("%s", c);
+		
 		System.out.println(c);
 		System.out.println("");
 		
@@ -128,7 +144,7 @@ public class StringBuilder16 {
 		System.out.println("");
 		
 		System.out.printf("%s", Character.toString(c));
-		System.out.printf("%c", Character.toString('c'));
+		//System.out.printf("%c", Character.toString('c'));
 		System.out.println("");
 		
 		// no output when run

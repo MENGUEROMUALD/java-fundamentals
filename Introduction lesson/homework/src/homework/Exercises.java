@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Random;
 
-public class Exercises16 {
+public class Exercises {
 	
 	
 	public int max(int a, int b, int c) {
@@ -18,7 +18,7 @@ public class Exercises16 {
 
 	public static void main(String[] args) {
 		
-		Exercises16 Ex = new Exercises16();
+		Exercises Ex = new Exercises();
 		System.out.println(Ex.max(4,9,7));
 		
 		int max = 0;

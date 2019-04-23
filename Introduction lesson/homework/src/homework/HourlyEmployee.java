@@ -1,5 +1,10 @@
 package homework;
 
+/**
+ * This is an extended class from the employee class called the hourlyEmployees
+ * @author Uduma Andreas Mokonchu
+ *@since March 27 2019
+ */
 public class HourlyEmployee extends Employee{
 	
 	private double hourlyPay;
@@ -12,6 +17,9 @@ public class HourlyEmployee extends Employee{
 		setHourlyPay(pay);
 		setHoursWorked(hours);
 	}
+	/**
+	 * The houly employees are another set of employees extending the employee class.
+	 */
 
 	@Override
 	public double computeSalary() {
@@ -51,7 +59,7 @@ public class HourlyEmployee extends Employee{
 				+ "Hours Worked: %d "
 				+ "Earnings: %,.2f"
 				+ "", getFirstName(), getLastName(),getEmployeeId(), getAge(), getEmployed(), getHourlyPay(),
-				getHoursWorked(), computeEarnings() );
+				getHoursWorked(), computeSalary() );
 				}
 
 			

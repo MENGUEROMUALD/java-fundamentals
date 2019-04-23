@@ -3,6 +3,7 @@ package homework;
 public class Cat {
 	private int legs;                // difference using private and public Vs without???
 	private String color;
+	private String name;
 	int age;       // state = member/instance variables
 	public static int catCount; //class variable(static) 				FIELDS
 	
@@ -25,6 +26,10 @@ public class Cat {
 		this.color = color;
 		System.out.println("New cat.Color : "+color);
 	}
+	public Cat(String name, String color) {
+		this.setName(name);
+		this.color = color;
+	}
 		
 	public static void sellsCats() {
 		
@@ -44,5 +49,11 @@ public class Cat {
 	@Override       
 	protected void finalize(){      
 		System.out.println("Destroying .................... ");
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 }

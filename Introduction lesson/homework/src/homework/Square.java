@@ -1,6 +1,6 @@
 package homework;
 
-public class Square extends TwoDimentionalShape implements Area {
+public class Square extends TwoDimentionalShape {
 	
 
 	public Square(String name, int height, int width) {
