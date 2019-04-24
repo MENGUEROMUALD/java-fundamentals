@@ -14,14 +14,15 @@ public class Exercice3 {
 		System.out.println("---------------------------------------------");
 		perfectNumber(num);
 	}
-	
+	/**
+	 * ici il est question de determiner si le nombre est un nombre premier
+	 * @param Number
+	 */
 	public static void checkIsPrime(int num) {
         boolean flag = false;
-        for(int i = 2; i <= num/2; ++i)
-        {
+        for(int i = 2; i <= num/2; ++i){
             
-            if(num % i == 0)
-            {
+            if(num % i == 0){
                 flag = true;
                 break;
             }
@@ -32,7 +33,10 @@ public class Exercice3 {
         else
             System.out.println(num + " n'est pas un nombre premier");
 	}
-	
+	/**
+	 * ici il est question de determiner si le nombre est un nombre parfait
+	 * @param Number
+	 */
 	public static void perfectNumber(int Number) {
 		int i, Sum = 0 ;
 		for(i = 1 ; i < Number ; i++) {
