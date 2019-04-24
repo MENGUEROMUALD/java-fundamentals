@@ -48,7 +48,6 @@ public class Excerci4 {
 	 * @param num
 	 */
 	public static void checkIsPrionick(int num) {
-	 	Scanner sc = new Scanner(System.in);
         int j = 0;
     
         for(int i=0; i<num; i++){
