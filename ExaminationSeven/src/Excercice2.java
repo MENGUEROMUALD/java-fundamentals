@@ -2,22 +2,22 @@ import java.util.Scanner;
 
 class Convert {
 	
-	public static void main(String[] args) { 
-		convert_to_words("9923".toCharArray()); 
-		convert_to_words("523".toCharArray()); 
-		convert_to_words("89".toCharArray()); 
-		convert_to_words("8989".toCharArray()); 
-	} 
 	
-public static void convert_to_words(char[] num) { 
+	public static void main(String[] args) {
+		System.out.println("entrer un nombre ");
+		Scanner input = new Scanner(System.in);
+		String num =input.nextLine();
+		convert_to_words(num.toCharArray()); 
+		
+	}
+	
+	public static void convert_to_words(char[] num) { 
 	int len = num.length; 
-	if (len == 0) 
-	{ 
+	if (len == 0) { 
 		System.out.println("empty string"); 
 		return; 
 	} 
-	if (len > 4) 
-	{ 
+	if (len > 4) { 
 		System.out.println("Length more than 4 is not supported"); 
 		return; 
 	} 
@@ -42,8 +42,7 @@ public static void convert_to_words(char[] num) {
 	System.out.print(String.valueOf(num)+": "); 
 
 	
-	if (len == 1) 
-	{ 
+	if (len == 1){ 
 		System.out.println(single_digits[num[0] - '0']); 
 		return; 
 	} 
@@ -64,8 +63,7 @@ public static void convert_to_words(char[] num) {
 		
 		else{ 
 			
-			if (num[x] - '0' == 1) 
-			{ 
+			if (num[x] - '0' == 1) { 
 				int sum = num[x] - '0' + 
 					num[x] - '0'; 
 				System.out.println(two_digits[sum]); 
@@ -73,15 +71,13 @@ public static void convert_to_words(char[] num) {
 			} 
 
 			else if (num[x] - '0' == 2 && 
-					num[x + 1] - '0' == 0) 
-			{ 
+					num[x + 1] - '0' == 0) { 
 				System.out.println("twenty"); 
 				return; 
 			} 
 
 			
-			else
-			{ 
+			else{ 
 				int i = (num[x] - '0'); 
 				if(i > 0) 
 				System.out.print(tens_multiple[i]+" "); 
